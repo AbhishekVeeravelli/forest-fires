@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://127.0.0.1:5500/fire.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Bootstrap Example</title>
+    <link rel="stylesheet" href="./fire forest_files/leaflet.css">
+    <script src="./fire forest_files/leaflet.js.download"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./fire forest_files/bootstrap.min.css">
+    <script src="./fire forest_files/jquery.min.js.download"></script>
+    <script src="./fire forest_files/bootstrap.min.js.download"></script>
+  <style>
+    .heading {
+      background-color: #eeeeee;
+      padding: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    input[type="text"] {
+      width: 200px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: white;
+      background-image: url("search.png");
+      background-size: 20px;
+      opacity: 0.7;
+      background-position: 10px 12px;
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      margin-left: 1px;
+      margin-bottom: 15px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+    }
+    .list:hover {
+      background-color: #cccccc;
+    }
+
+    /* When the input field gets focus, change its width to 100% */
+    input[type="text"]:focus {
+      width: 100%;
+    }
+    .btn {
+      position: absolute;
+      top: 50%;
+      margin-left: 10px;
+      left: 3%;
+      height: 100px;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #eeeeee;
+      color: black;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+    .container {
+      position: relative;
+      width: 100%;
+    }
+  </style></head>
+  
+  <body>
+    <div class="text-center heading">
+      <h2>Fire detection Using Satellite Images</h2>
+    </div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://127.0.0.1:5500/fire.html#">Fire Detection</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="http://127.0.0.1:5500/fire.html#">Home</a></li>
+          <li><a href="http://127.0.0.1:5500/fire.html#">Options</a></li>
+          <li><a href="http://127.0.0.1:5500/fire.html#">Link</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 my-0" id="side" style="height: 500px; width: 20%; display: none">
+          <input type="text" name="search" placeholder="Search..">
+          <ul class="list-group">
+            <li class="list-group-item list">Forest Fire management</li>
+            <li class="list-group-item list">Area effected</li>
+            <li class="list-group-item list">Direction of spread</li>
+            <li class="list-group-item list">About us</li>
+            <li class="list-group-item list">Contact information</li>
+          </ul>
+        </div>
+        <div class="col-sm-9 container" id="map1" style="display: inline-block; height: 500px; width: 100%">
+          <div id="map" style="width: 100%; height: 600px; margin-left: 100px; position: relative;" class="leaflet-container leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag" tabindex="0"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 5; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" role="presentation" src="./fire forest_files/736" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(589px, 14px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/736(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(589px, 270px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/735" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(333px, 14px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/737" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(845px, 14px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/735(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(333px, 270px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/737(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(845px, 270px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/736(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(589px, -242px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/736(3)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(589px, 526px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/735(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(333px, -242px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/737(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(845px, -242px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/735(3)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(333px, 526px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/737(3)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(845px, 526px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/734" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(77px, 14px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/738" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1101px, 14px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/734(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(77px, 270px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/738(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1101px, 270px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/734(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(77px, -242px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/738(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1101px, -242px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/734(3)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(77px, 526px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/738(3)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1101px, 526px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/733" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-179px, 14px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/739" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1357px, 14px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/733(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-179px, 270px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/739(1)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1357px, 270px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/733(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-179px, -242px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/739(2)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1357px, -242px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/733(3)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-179px, 526px, 0px); opacity: 1;"><img alt="" role="presentation" src="./fire forest_files/739(3)" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1357px, 526px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-marker-pane"></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(188571px, 115742px, 0px) scale(512);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="http://127.0.0.1:5500/fire.html#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="http://127.0.0.1:5500/fire.html#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-layers leaflet-control" aria-haspopup="true"><a class="leaflet-control-layers-toggle" href="http://127.0.0.1:5500/fire.html#" title="Layers"></a><section class="leaflet-control-layers-list"><div class="leaflet-control-layers-base"><label><div><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_82"><span> osm</span></div></label><label><div><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_82"><span> dark map</span></div></label><label><div><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_82"><span> outdoors map</span></div></label><label><div><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_82"><span> Opentopo map</span></div></label><label><div><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_82" checked="checked"><span> satellite map</span></div></label></div><div class="leaflet-control-layers-separator"></div><div class="leaflet-control-layers-overlays"><label><div><input type="checkbox" class="leaflet-control-layers-selector"><span> marker</span></div></label></div></section></div></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community</div></div></div></div>
+
+          <button onclick="myFunction()" class="btn">
+            <img src="./fire forest_files/arrow .png" style="width: 20px">
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("side");
+        var y = document.getElementById("map1");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          y.style.width = "80%";
+        } else {
+          x.style.display = "none";
+          y.style.width = "100%";
+        }
+      }
+    </script>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<script src="./fire forest_files/main.js.download"></script>
+</body></html>
